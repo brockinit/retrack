@@ -1,12 +1,12 @@
 module.exports = `
-  query getPullRequests($owner: String!, $name: String!){
+  query getPullRequests($owner: String!, $name: String!, $first: Int!, $last: Int!){
     repository(owner: $owner, name: $name) {
       name
-      pullRequests(last: 10, states:[OPEN]) {
+      pullRequests(last: $last, states:[OPEN]) {
         edges {
           node {
             title
-            reviewRequests(first:2) {
+            reviewRequests(first: $first) {
               edges {
                 node {
                   reviewer {
@@ -15,7 +15,7 @@ module.exports = `
                 }
               }
             }
-            assignees(first: 2) {
+            assignees(first: $first) {
               edges {
                 node {
                   name

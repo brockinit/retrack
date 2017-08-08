@@ -12,7 +12,7 @@ const repoName = 'tuition-yikes';
 router.get('/', (req, res) => {
   graphqlService(
     getPullRequests,
-    { owner: accountOwner, name: repoName },
+    { owner: accountOwner, name: repoName, first: 2, last: 10 },
     req.accessToken
   )
     .then(data => {
