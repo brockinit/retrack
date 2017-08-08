@@ -1,10 +1,8 @@
 const express = require('express');
 const passport = require('passport');
 const bodyParser = require('body-parser');
-const handlebars = require('express-handlebars');
-const session = require('express-session');
-const pullRequests = require('./pullRequests');
 const GitHubStrategy = require('passport-github2').Strategy;
+const pullRequests = require('./pullRequests');
 const {
   CLIENT_SECRET,
   CLIENT_ID,
@@ -14,14 +12,8 @@ const {
 } = process.env;
 
 const app = express();
-const hbs = handlebars.create({
-  extname: 'hbs',
-  defaultLayout: 'app',
-});
 let token;
 
-app.engine('hbs', hbs.engine);
-app.set('view engine', 'hbs');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(passport.initialize());
@@ -72,10 +64,3 @@ app.use(
 app.listen(SERVER_PORT, () => {
   console.log(`Server listening on port ${SERVER_PORT}`);
 });
-
-function ensureAuthenticated(req, res, next) {
-  if (req.isAuthenticated()) {
-    return next();
-  }
-  res.redirect('/');
-}
