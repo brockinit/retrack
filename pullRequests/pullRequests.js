@@ -5,21 +5,25 @@ const { getPullRequests } = require('../queries');
 
 const router = express.Router();
 
-// For testing only, these will be dynamically generated later
-const accountOwner = 'brockinit';
-const repoName = 'tuition-yikes';
+// For testing only, this will be dynamically generated later
+const organization = 'sudokrew';
 
 router.get('/', (req, res) => {
   graphqlService(
     getPullRequests,
-    { owner: accountOwner, name: repoName, first: 2, last: 10 },
+    { first: 2, login: organization },
     req.accessToken
   )
     .then(data => {
-      const payload = data.repository.pullRequests.edges.map(constructPayload);
-      res.json(payload);
+      console.log('data', data);
+      const activeRepos = data.organization.repositories.nodes
+        .filter(({ pullRequests }) => pullRequests.nodes.length !== 0)
+        .map(constructPayload);
+      console.log('activeRepos', activeRepos);
+      res.json(activeRepos);
     })
     .catch(err => {
+      console.log('err', err);
       res.status(500).json({ error: err });
     });
 });

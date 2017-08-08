@@ -4,10 +4,18 @@
  * @param pullRequest {Object} - The pullRequest objects
  * @returns {Object} - The formatted pullRequest payload
 */
-module.exports = pullRequest => {
+module.exports = ({ pullRequests, name }) => {
   return {
-    title: pullRequest.node.title,
-    assignees: pullRequest.node.assignees.edges,
-    reviewers: pullRequest.node.reviewRequests.edges,
+    name,
+    pullRequests: pullRequests.nodes.map(
+      ({ updatedAt, author, title, reviewRequests }) => {
+        return {
+          title,
+          updatedAt,
+          author: author.login,
+          reviewers: reviewRequests.edges.map(({ node }) => node.reviewer.name),
+        };
+      }
+    ),
   };
 };

@@ -1,12 +1,18 @@
 module.exports = `
-  query getPullRequests($owner: String!, $name: String!, $first: Int!, $last: Int!){
-    repository(owner: $owner, name: $name) {
-      name
-      pullRequests(last: $last, states:[OPEN]) {
-        edges {
-          node {
-            title
-            reviewRequests(first: $first) {
+query getPullRequests($login: String!){
+  organization(login: $login) {
+    id
+    repositories(first: 5, orderBy: {field: UPDATED_AT, direction: DESC}) {
+      nodes {
+        name
+        pullRequests(first: 5, states:[OPEN]) {
+          nodes {
+            createdAt
+            updatedAt
+            author {
+              login
+            }
+            reviewRequests(first: 2) {
               edges {
                 node {
                   reviewer {
@@ -15,16 +21,11 @@ module.exports = `
                 }
               }
             }
-            assignees(first: $first) {
-              edges {
-                node {
-                  name
-                }
-              }
-            }
+            title
           }
         }
       }
     }
   }
+}
 `;
