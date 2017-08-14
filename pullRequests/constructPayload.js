@@ -12,8 +12,14 @@ module.exports = ({ pullRequests, name }) => {
         return {
           title,
           updatedAt,
-          author: author.login,
-          reviewers: reviewRequests.edges.map(({ node }) => node.reviewer.name),
+          author: {
+            username: author.login,
+            avatar: author.avatarUrl,
+          },
+          reviewers: reviewRequests.edges.map(({ node }) => ({
+            username: node.reviewer.login,
+            avatar: author.avatarUrl,
+          })),
         };
       }
     ),
