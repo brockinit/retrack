@@ -1,5 +1,23 @@
 <div>
   {{#each activeRepos}}
-    <div>{{name}}</div>
+    <div class="card">
+      <h2>{{name}} ({{pullRequests.length}})</h2>
+      {{#each pullRequests}}
+        <div>
+          <h4>{{title}}</h4>
+          <strong>Opened: {{createdAt}}</strong>
+          <div class="person">
+            <label>Author: {{author.username}}<label>
+            <img src={{author.avatar}} height="50" width="50" />
+          </div>
+          {{#each reviewers}}
+            <div class="person">
+              <label>Reviewer: {{username}}<label>
+              <img src={{avatar}} height="50" width="50" />
+            </div>
+          {{/each}}
+        </div>
+      {{/each}}
+    </div>
   {{/each}}
 </div>
