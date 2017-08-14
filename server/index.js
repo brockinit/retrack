@@ -1,5 +1,6 @@
 const express = require('express');
 const passport = require('passport');
+const path = require('path');
 const bodyParser = require('body-parser');
 const handlebars = require('express-handlebars');
 const GitHubStrategy = require('passport-github2').Strategy;
@@ -22,6 +23,7 @@ const hbs = handlebars.create({
 
 app.engine('hbs', hbs.engine);
 app.set('view engine', 'hbs');
+app.use(express.static(path.resolve(__dirname, '../public')));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(passport.initialize());

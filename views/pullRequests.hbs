@@ -1,9 +1,9 @@
-<div>
+<div class="repo-container-outer">
   {{#each activeRepos}}
-    <div class="card">
+    <div class="repo-container">
       <h2>{{name}} ({{pullRequests.length}})</h2>
       {{#each pullRequests}}
-        <div>
+        <div class="repo-card">
           <h4>{{title}}</h4>
           <strong>Opened: {{createdAt}}</strong>
           <div class="person">
