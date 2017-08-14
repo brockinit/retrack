@@ -1,0 +1,75 @@
+@import '../base/colors';
+
+// Main layout for members view
+.layout-sidemenu-main {
+  display: flex;
+  background-image: url("/images/tapa-repeating-pattern.svg");
+  background-position: right;
+  background-repeat: repeat-y;
+  background-size: 300px;
+}
+
+.layout-sidemenu-main__side {
+  background: -webkit-linear-gradient(#4C4058 0%, #424C6B 100%);
+  background: -o-linear-gradient(#4C4058 0%, #424C6B 100%);
+  background: linear-gradient(#4C4058 0%, #424C6B 100%);
+  color: $color-white;
+  flex: 0 0 200px;
+  margin-right: 50px;
+  min-height: 100vh;
+}
+
+.layout-sidemenu-main__main {
+  flex: 1 1 800px;
+  min-height: 100vh;
+}
+
+// Layout for the members page content
+.layout-member-container {
+  display: flex;
+}
+
+.layout-member-container__side {
+  flex: 0 0 300px;
+}
+
+.layout-member-container__main {
+  flex: 1 1 800px;
+  min-width: 320px;
+  max-width: 900px;
+}
+
+// Column layout
+.layout__column-container {
+  display: flex;
+}
+
+.layout__column--child {
+  flex: 1 0 0;
+}
+
+.layout__column--one-wide {
+  flex: 1 0 0;
+}
+
+.layout__column--two-wide {
+  flex: 2 0 0;
+}
+
+.layout__column--three-wide {
+  flex: 3 0 0;
+}
+
+.layout__column--four-wide {
+  flex: 4 0 0;
+}
+
+.layout__column--five-wide {
+  flex: 5 0 0;
+}
+
+.layout--center-center-content {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}

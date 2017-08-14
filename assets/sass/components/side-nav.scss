@@ -1,0 +1,73 @@
+@import '../base/colors';
+
+.side-nav {
+  height: 100%;
+  background-image: url("/images/kukui-leaf-sidebar-pattern.png");
+  background-position: center left;
+  background-repeat: no-repeat;
+
+  &__logo {
+    background-color: $color-main-light;
+    padding: 2rem;
+    text-align: center;
+
+    img {
+      height: 50px;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 0.8rem;
+      font-weight: 100;
+      letter-spacing: 1px;
+      line-height: 18px;
+      margin: 0;
+      text-transform: uppercase;
+    }
+  }
+
+  &__profile {
+    background: rgb(54, 50, 69);
+    padding: 1.5rem 1rem;
+    text-align: center;
+    p {
+      font-size: 0.9rem;
+      font-weight: 100;
+      letter-spacing: 0.125rem;
+      line-height: 1.2rem;
+      margin: 0;
+      text-transform: uppercase;
+    }
+  }
+
+  &__link-block {
+    padding: 2rem;
+
+    ul {
+      a,
+      a:active,
+      a:hover,
+      a:focus {
+        color: $color-white;
+        font-size: 0.8rem;
+        letter-spacing: 0.08rem;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+      list-style-type: none;
+      padding: 0;
+      margin: 0.2rem;
+    }
+
+    ul li ul {
+      color: red;
+      list-style-type: disc;
+      padding-left: 1rem;
+    }
+
+    ul li ul li {
+      font-size: 0.75rem;
+      font-weight: 300;
+    }
+  }
+}

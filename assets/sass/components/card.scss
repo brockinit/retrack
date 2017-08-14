@@ -1,0 +1,28 @@
+@import '../base/colors';
+
+.card {
+  background-color: $color-white;
+  border-radius: 4px;
+  box-shadow: 0 0 6px 0 rgba(0,0,0,0.1);
+  margin: 0 16px 16px 0;
+  padding: 20px;
+
+  &__link--external {
+    a,
+    a:active,
+    a:hover,
+    a:focus {
+      text-decoration: none;
+      color: $color-grey-dark;
+    }
+
+    img {
+      margin-left: 0.75rem;
+    }
+  }
+}
+
+.card--no-padding {
+  @extend .card;
+  padding: 0;
+}

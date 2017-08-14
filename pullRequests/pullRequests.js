@@ -18,7 +18,17 @@ router.get('/', (req, res) => {
       const activeRepos = data.organization.repositories.nodes
         .filter(({ pullRequests }) => pullRequests.nodes.length !== 0)
         .map(constructPayload);
-      res.json(activeRepos);
+      res.render(
+        'pullRequests',
+        Object.assign(
+          {},
+          {
+            layout: 'app',
+            activeRepos,
+            pageTitle: 'Pull Requests',
+          }
+        )
+      );
     })
     .catch(err => {
       console.log('err', err);

@@ -1,0 +1,15 @@
+@import '../base/colors';
+
+.event-box {
+  display: flex;
+  align-items: center;
+}
+
+.event-box__date {
+  padding: 0 24px;
+}
+
+.event-box__details {
+  border-left: 1px solid $color-grey-light;
+  padding: 20px;
+}

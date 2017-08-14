@@ -1,8 +1,9 @@
 const express = require('express');
 const passport = require('passport');
 const bodyParser = require('body-parser');
+const handlebars = require('express-handlebars');
 const GitHubStrategy = require('passport-github2').Strategy;
-const pullRequests = require('./pullRequests');
+const pullRequests = require('../pullRequests');
 const {
   CLIENT_SECRET,
   CLIENT_ID,
@@ -14,11 +15,19 @@ const {
 const app = express();
 let token;
 
+const hbs = handlebars.create({
+  extname: 'hbs',
+  defaultLayout: 'app',
+});
+
+app.engine('hbs', hbs.engine);
+app.set('view engine', 'hbs');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(passport.initialize());
 app.use(passport.session());
 
+// Auth Flow
 passport.serializeUser((user, done) => {
   done(null, user);
 });
@@ -38,12 +47,10 @@ passport.use(
     }
   )
 );
-
 app.get(
   '/auth/github',
   passport.authenticate('github', { scope: ['repo', 'admin:org'] })
 );
-
 app.get(
   '/auth/github/callback',
   passport.authenticate('github', { failureRedirect: '/' }),
@@ -52,6 +59,7 @@ app.get(
   }
 );
 
+// /pull-requests
 app.use(
   '/pull-requests',
   (req, res, next) => {
