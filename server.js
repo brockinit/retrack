@@ -41,7 +41,7 @@ passport.use(
 
 app.get(
   '/auth/github',
-  passport.authenticate('github', { scope: ['read:org'] })
+  passport.authenticate('github', { scope: ['repo', 'admin:org'] })
 );
 
 app.get(

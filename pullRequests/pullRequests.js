@@ -11,14 +11,15 @@ const organization = 'sudokrew';
 router.get('/', (req, res) => {
   graphqlService(
     getPullRequests,
-    { first: 2, login: organization },
+    { first: 5, login: organization, field: 'UPDATED_AT', direction: 'DESC' },
     req.accessToken
   )
     .then(data => {
-      console.log('data', data);
-      const activeRepos = data.organization.repositories.nodes
-        .filter(({ pullRequests }) => pullRequests.nodes.length !== 0)
-        .map(constructPayload);
+      console.log('data', data.organization.repositories.nodes);
+      const activeRepos = data.organization.repositories.nodes.filter(
+        ({ pullRequests }) => pullRequests.nodes.length !== 0
+      );
+      // .map(constructPayload);
       console.log('activeRepos', activeRepos);
       res.json(activeRepos);
     })

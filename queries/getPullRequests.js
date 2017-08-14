@@ -1,8 +1,8 @@
 module.exports = `
-query getPullRequests($login: String!){
+query getPullRequests($login: String!, $first: Int!, $field: RepositoryOrderField!, $direction: OrderDirection!){
   organization(login: $login) {
     id
-    repositories(first: 5, orderBy: {field: UPDATED_AT, direction: DESC}) {
+    repositories(first: $first, orderBy: {field: $field, direction: $direction}) {
       nodes {
         name
         pullRequests(first: 5, states:[OPEN]) {
