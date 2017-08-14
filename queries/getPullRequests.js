@@ -5,8 +5,10 @@ query getPullRequests($login: String!, $first: Int!, $field: RepositoryOrderFiel
     repositories(first: $first, orderBy: {field: $field, direction: $direction}) {
       nodes {
         name
-        pullRequests(first: 5, states:[OPEN]) {
+        pullRequests(first: 10, states:[OPEN]) {
           nodes {
+            number
+            url
             createdAt
             updatedAt
             author {

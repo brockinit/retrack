@@ -21,18 +21,74 @@ body {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  padding: 20px;
+  padding: 1rem;
 }
 
 .repo-container {
   width: 25%;
-  padding: 15px;
+  padding: 1.5rem;
   text-align: center;
 }
 
 .repo-card {
-  padding: 10px;
-  margin-bottom: 10px;
   box-shadow: 0 0.125rem 0.75rem 0 rgba(#000, 0.11);
   background-color: #fff;
+  color: #000;
+  margin-bottom: 1rem;
+}
+
+.card-content {
+  padding: 1rem;
+}
+
+.repo-title {
+  text-transform: uppercase;
+}
+
+.pull-request-title {
+  text-align: left;
+  margin-bottom: 1rem;
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  a:hover {
+    color: rgb(24, 118, 240);
+  }
+}
+
+.pull-request-opened {
+  font-size: .9rem;
+}
+
+.new-pr {
+  background-color: white;
+  opacity: 0;
+}
+
+.middle-aged-pr {
+  background-color: rgb(255, 241, 178);
+  opacity: 0.75;
+}
+
+.old-pr {
+  background-color: #c65e67;
+  opacity: 1;
+}
+
+.people-involved {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.avatar {
+  border-radius: 10px/30px;
+}
+
+.reviewer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.25rem;
 }
