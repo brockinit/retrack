@@ -1,0 +1,19 @@
+version: '2'
+
+services:
+  app:
+    environment:
+      - CLIENT_ID=${CLIENT_ID}
+      - CLIENT_SECRET=${CLIENT_SECRET}
+      - GRAPHQL_ENDPOINT=${GRAPHQL_ENDPOINT}
+      - CALLBACK_URL=${CALLBACK_URL}
+    build:
+      context: .
+      dockerfile: Dockerfile.development
+    container_name: krew_konsole_app
+    image: sudokrew/krew-konsole-app:local
+    volumes:
+      - "${PWD}:/app"
+      - "/app/node_modules/"
+    ports:
+      - 5000:5000

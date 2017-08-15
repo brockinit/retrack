@@ -6,9 +6,9 @@ const { getPullRequests } = require('../queries');
 const router = express.Router();
 
 const queryVars = {
-  first: 10,
+  first: 6,
   login: 'sudokrew',
-  field: 'UPDATED_AT',
+  field: 'PUSHED_AT',
   direction: 'DESC',
 };
 
@@ -31,7 +31,6 @@ router.get('/', (req, res) => {
       );
     })
     .catch(err => {
-      console.log('err', err);
       res.status(500).json({ error: err });
     });
 });

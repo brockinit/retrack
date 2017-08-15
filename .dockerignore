@@ -1,0 +1,21 @@
+# Application source
+.next
+
+# Development files
+.editorconfig
+*.env
+README.md
+
+# Docker
+.dockerignore
+[Dd]ocker*
+
+# Logs
+*.log
+
+# Git
+.git
+.gitignore
+
+# Node
+node_modules

@@ -1,0 +1,15 @@
+FROM sudokrew/nodejs:6.10.1
+
+COPY package.json /app/
+WORKDIR /app
+
+USER root
+RUN chown -R sudokrew /app
+
+USER sudokrew
+
+RUN npm install
+
+EXPOSE 5000
+
+CMD ["npm", "start"]
