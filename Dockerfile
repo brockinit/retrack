@@ -11,6 +11,6 @@ USER sudokrew
 
 RUN npm install --production
 
-EXPOSE 5000
+EXPOSE 3000
 
 CMD ["npm", "start"]
