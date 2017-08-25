@@ -1,0 +1,102 @@
+/* line 4, /Users/brockinit/sudokrew/retrack/assets/sass/layout/layouts.scss */
+.layout-sidemenu-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-image: url("/images/tapa-repeating-pattern.svg");
+  background-position: right;
+  background-repeat: repeat-y;
+  background-size: 300px; }
+
+/* line 12, /Users/brockinit/sudokrew/retrack/assets/sass/layout/layouts.scss */
+.layout-sidemenu-main__side {
+  background: linear-gradient(#4c4058 0%, #424c6b 100%);
+  color: #FFFFFF;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 200px;
+          flex: 0 0 200px;
+  margin-right: 50px;
+  min-height: 100vh; }
+
+/* line 22, /Users/brockinit/sudokrew/retrack/assets/sass/layout/layouts.scss */
+.layout-sidemenu-main__main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 800px;
+          flex: 1 1 800px;
+  min-height: 100vh; }
+
+/* line 28, /Users/brockinit/sudokrew/retrack/assets/sass/layout/layouts.scss */
+.layout-member-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+/* line 32, /Users/brockinit/sudokrew/retrack/assets/sass/layout/layouts.scss */
+.layout-member-container__side {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 300px;
+          flex: 0 0 300px; }
+
+/* line 36, /Users/brockinit/sudokrew/retrack/assets/sass/layout/layouts.scss */
+.layout-member-container__main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 800px;
+          flex: 1 1 800px;
+  min-width: 320px;
+  max-width: 900px; }
+
+/* line 43, /Users/brockinit/sudokrew/retrack/assets/sass/layout/layouts.scss */
+.layout__column-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+/* line 47, /Users/brockinit/sudokrew/retrack/assets/sass/layout/layouts.scss */
+.layout__column--child {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 0px;
+          flex: 1 0 0; }
+
+/* line 51, /Users/brockinit/sudokrew/retrack/assets/sass/layout/layouts.scss */
+.layout__column--one-wide {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 0px;
+          flex: 1 0 0; }
+
+/* line 55, /Users/brockinit/sudokrew/retrack/assets/sass/layout/layouts.scss */
+.layout__column--two-wide {
+  -webkit-box-flex: 2;
+      -ms-flex: 2 0 0px;
+          flex: 2 0 0; }
+
+/* line 59, /Users/brockinit/sudokrew/retrack/assets/sass/layout/layouts.scss */
+.layout__column--three-wide {
+  -webkit-box-flex: 3;
+      -ms-flex: 3 0 0px;
+          flex: 3 0 0; }
+
+/* line 63, /Users/brockinit/sudokrew/retrack/assets/sass/layout/layouts.scss */
+.layout__column--four-wide {
+  -webkit-box-flex: 4;
+      -ms-flex: 4 0 0px;
+          flex: 4 0 0; }
+
+/* line 67, /Users/brockinit/sudokrew/retrack/assets/sass/layout/layouts.scss */
+.layout__column--five-wide {
+  -webkit-box-flex: 5;
+      -ms-flex: 5 0 0px;
+          flex: 5 0 0; }
+
+/* line 71, /Users/brockinit/sudokrew/retrack/assets/sass/layout/layouts.scss */
+.repo-container-outer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border: 1px solid black; }

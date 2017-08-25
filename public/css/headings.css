@@ -1,0 +1,46 @@
+/* line 5, /Users/brockinit/sudokrew/retrack/assets/sass/base/base.scss */
+body, html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  line-height: 1.7rem;
+  font-family: "museo-sans", sans-serif;
+  background: #FFFFFF;
+  color: #4A4A4A; }
+
+/* line 16, /Users/brockinit/sudokrew/retrack/assets/sass/base/base.scss */
+.paragraph {
+  font-weight: 300;
+  letter-spacing: 0.01rem; }
+
+/* line 4, /Users/brockinit/sudokrew/retrack/assets/sass/base/headings.scss */
+h1, h2 {
+  font-family: "Open Sans", sans-serif;
+  margin: 0; }
+
+/* line 9, /Users/brockinit/sudokrew/retrack/assets/sass/base/headings.scss */
+h1 {
+  font-size: 2.5rem;
+  line-height: 3rem; }
+
+/* line 15, /Users/brockinit/sudokrew/retrack/assets/sass/base/headings.scss */
+h2 {
+  font-size: 1.3rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  line-height: 2.5rem;
+  text-transform: uppercase; }
+
+/* line 24, /Users/brockinit/sudokrew/retrack/assets/sass/base/headings.scss */
+.section__heading {
+  line-height: 1.7rem;
+  margin-bottom: 0.5rem; }
+
+/* line 29, /Users/brockinit/sudokrew/retrack/assets/sass/base/headings.scss */
+.section__subheading {
+  font-size: 0.7rem;
+  letter-spacing: 0.15rem;
+  line-height: 1.2rem;
+  margin: 0;
+  text-transform: uppercase; }

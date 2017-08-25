@@ -1,0 +1,21 @@
+/* line 3, /Users/brockinit/sudokrew/retrack/assets/sass/components/card.scss */
+.card, .card--no-padding {
+  background-color: #FFFFFF;
+  border-radius: 4px;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1);
+  margin: 0 16px 16px 0;
+  padding: 20px; }
+  /* line 11, /Users/brockinit/sudokrew/retrack/assets/sass/components/card.scss */
+  .card__link--external a,
+  .card__link--external a:active,
+  .card__link--external a:hover,
+  .card__link--external a:focus {
+    text-decoration: none;
+    color: #4A4A4A; }
+  /* line 19, /Users/brockinit/sudokrew/retrack/assets/sass/components/card.scss */
+  .card__link--external img {
+    margin-left: 0.75rem; }
+
+/* line 25, /Users/brockinit/sudokrew/retrack/assets/sass/components/card.scss */
+.card--no-padding {
+  padding: 0; }
