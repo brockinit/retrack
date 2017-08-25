@@ -1,16 +1,18 @@
-FROM sudokrew/nodejs:6.10.1
+FROM node:boron
 
-# Copy all production files
-COPY . /app
-WORKDIR /app
+# Create app directory
+WORKDIR /usr/src/app
 
-USER root
-RUN chown -R sudokrew /app
+# Install app dependencies
+COPY package.json .
+# For npm@5 or later, copy package-lock.json as well
+# COPY package.json package-lock.json .
 
-USER sudokrew
+RUN npm install
 
-RUN npm install --production
+# Bundle app source
+COPY . .
 
-EXPOSE 3000
+EXPOSE 8080
 
-CMD ["npm", "start"]
+CMD [ "npm", "start" ]

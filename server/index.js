@@ -65,6 +65,7 @@ app.get(
 app.use(
   '/pull-requests',
   (req, res, next) => {
+    console.log('token PULL REQUEST', token);
     req.accessToken = token;
     next();
   },

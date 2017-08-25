@@ -31,6 +31,7 @@ router.get('/', (req, res) => {
       );
     })
     .catch(err => {
+      console.log('err PULL REQUEST', err);
       res.redirect('/auth/github');
     });
 });
