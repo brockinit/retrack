@@ -1,2 +1,28 @@
-body {
-  color: blue; }
+.app-bar {
+  border: 5px solid blue;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  font-family: 'Open Sans'; }
+
+.repo-container-outer {
+  border: 5px solid green;
+  background-color: #EBEEEF;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box; }
+
+.repo-title {
+  border: 5px solid purple;
+  flex: 0 0 100%; }
+
+.repo-container {
+  border: 5px solid red;
+  width: 18%;
+  box-sizing: border-box;
+  margin: 0.5rem; }
+
+.repo-card {
+  border: 5px solid yellow; }
