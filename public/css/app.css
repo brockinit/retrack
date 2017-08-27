@@ -1,14 +1,12 @@
 .app-bar {
-  border: 5px solid blue;
   padding-left: 3rem;
   padding-right: 3rem;
   display: flex;
   justify-content: space-between;
   box-sizing: border-box;
-  font-family: 'Open Sans'; }
+  font-family: "Open Sans"; }
 
 .repo-container-outer {
-  border: 5px solid green;
   background-color: #EBEEEF;
   display: flex;
   flex-wrap: wrap;
@@ -16,22 +14,55 @@
   box-sizing: border-box; }
 
 .repo-title {
-  border: 5px solid purple;
   height: 3rem;
   text-align: center;
-  vertical-align: middle;
-  font-family: 'Open Sans';
-  background-color: teal;
-  color: white;
-  font-weight: 300;
+  align-self: center;
+  padding: 0.75rem;
+  font-family: "Open Sans";
+  color: #78898E;
+  text-transform: uppercase;
   font-size: 1rem; }
 
 .repo-container {
-  border: 5px solid red;
   width: 18%;
   box-sizing: border-box;
   margin: 0.5rem; }
 
 .repo-card {
-  border: 5px solid yellow;
-  font-family: 'Open Sans'; }
+  font-family: "Open Sans";
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.25); }
+
+.pull-request-title {
+  background-color: #69B2B3;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 0.5rem; }
+  .pull-request-title p {
+    font-size: 0.9rem;
+    color: white; }
+
+.card-body-container {
+  background-color: white;
+  padding: 0.75rem; }
+
+.top-card-container {
+  display: flex; }
+
+.pull-request-opened {
+  padding-left: 0.5rem; }
+  .pull-request-opened a {
+    color: #78898E;
+    text-decoration: none;
+    font-size: 0.8rem; }
+
+.reviewer-container {
+  display: flex;
+  justify-content: center; }
+
+.person {
+  padding: 0.5rem 0.5rem 0rem 0.5rem; }
+  .person img {
+    border-radius: 50%;
+    opacity: 0.9; }

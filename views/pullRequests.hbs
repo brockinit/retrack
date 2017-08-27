@@ -6,17 +6,20 @@
         <div class="repo-card">
           <div class="card-content">
             <div class="pull-request-title">
-              <a href={{url}}>#{{number}} {{title}}</a>
+              <p>Opened {{opened}}</p>
             </div>
-            <div class="people-involved">
-              <div class="author">
-              <label>Author<label>
-                <div class="person">
-                  <img class="avatar" src={{author.avatar}} height="40" width="40" />
+            <div class="card-body-container">
+              <div class="top-card-container">
+                <div class="author">
+                  <div class="author-image">
+                    <img class="avatar" src={{author.avatar}} height="40" width="40" />
+                  </div>
+                </div>
+                <div class="pull-request-opened {{ageColor}}">
+                  <a href={{url}}>#{{number}} {{title}}</a>
                 </div>
               </div>
               <div class="reviewers">
-                <label>Reviewers<label>
                 <div class="reviewer-container">
                 {{#each reviewers}}
                   <div class="person">
@@ -26,9 +29,6 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div class="pull-request-opened {{ageColor}}">
-            <p>Opened {{opened}}</p>
           </div>
         </div>
       {{/each}}
