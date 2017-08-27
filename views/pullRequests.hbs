@@ -5,7 +5,7 @@
       {{#each pullRequests}}
         <div class="repo-card">
           <div class="card-content">
-            <div class="pull-request-title">
+            <div class="pull-request-title {{ageColor}}" >
               <p>Opened {{opened}}</p>
             </div>
             <div class="card-body-container">
@@ -15,7 +15,7 @@
                     <img class="avatar" src={{author.avatar}} height="40" width="40" />
                   </div>
                 </div>
-                <div class="pull-request-opened {{ageColor}}">
+                <div class="pull-request-opened">
                   <a href={{url}}>#{{number}} {{title}}</a>
                 </div>
               </div>

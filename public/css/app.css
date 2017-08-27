@@ -1,10 +1,18 @@
 .app-bar {
-  padding-left: 3rem;
-  padding-right: 3rem;
+  margin: 1rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   box-sizing: border-box;
-  font-family: "Open Sans"; }
+  font-family: "futura-pt", sans-serif;
+  font-style: normal;
+  font-weight: 300; }
+  .app-bar .app-bar-item {
+    margin-left: 2rem; }
+  .app-bar h1 {
+    color: #78898E;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 400; }
 
 .repo-container-outer {
   background-color: #EBEEEF;
@@ -17,8 +25,9 @@
   height: 3rem;
   text-align: center;
   align-self: center;
-  padding: 0.75rem;
-  font-family: "Open Sans";
+  margin-top: 2.5rem;
+  font-family: "futura-pt", sans-serif;
+  font-weight: 400;
   color: #78898E;
   text-transform: uppercase;
   font-size: 1rem; }
@@ -29,7 +38,7 @@
   margin: 0.5rem; }
 
 .repo-card {
-  font-family: "Open Sans";
+  font-family: "futura-pt", sans-serif;
   box-sizing: border-box;
   margin-bottom: 1rem;
   box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.25); }
@@ -41,7 +50,20 @@
   padding: 0.5rem; }
   .pull-request-title p {
     font-size: 0.9rem;
-    color: white; }
+    color: white;
+    font-weight: 300; }
+
+.old-pr {
+  background-color: #DB3A34;
+  opacity: 0.8; }
+
+.new-pr {
+  background-color: #177E89;
+  opacity: 0.8; }
+
+.middle-aged-pr {
+  background-color: #FFC857;
+  opacity: 0.8; }
 
 .card-body-container {
   background-color: white;
@@ -55,7 +77,8 @@
   .pull-request-opened a {
     color: #78898E;
     text-decoration: none;
-    font-size: 0.8rem; }
+    font-size: 0.85rem;
+    font-weight: 300; }
 
 .reviewer-container {
   padding: 0.25rem 0rem 0.25rem 0rem;

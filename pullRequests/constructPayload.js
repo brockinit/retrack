@@ -8,7 +8,6 @@ const moment = require('moment');
 
 function getAgeColor(age) {
   const ageInDays = +age.split(' days ago').shift();
-
   if (ageInDays > 1 && ageInDays <= 3) {
     return 'middle-aged-pr';
   }

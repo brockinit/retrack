@@ -1,17 +1,29 @@
-$font-family: 'Open Sans';
+$font-family: "futura-pt", sans-serif;
+$old-pr: #DB3A34;
+$middle-aged-pr: #FFC857;
+$new-pr: #177E89;
+$pr-opacity: 0.8;
 
 .app-bar {
-  // border: 5px solid blue;
-  padding-left: 3rem;
-  padding-right: 3rem;
+  margin: 1rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   box-sizing: border-box;
   font-family: $font-family;
+  font-style: normal;
+  font-weight: 300;
+  .app-bar-item {
+    margin-left: 2rem;
+  }
+  h1 {
+    color: #78898E;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 400;
+  }
 }
 
 .repo-container-outer {
-  // border: 5px solid green;
   background-color: #EBEEEF;
   display: flex;
   flex-wrap: wrap;
@@ -20,19 +32,18 @@ $font-family: 'Open Sans';
 }
 
 .repo-title {
-  // border: 5px solid purple;
   height: 3rem;
   text-align: center;
   align-self: center;
-  padding: 0.75rem;
+  margin-top: 2.5rem;
   font-family: $font-family;
+  font-weight: 400;
   color: #78898E;
   text-transform: uppercase;
   font-size: 1rem;
 }
 
 .repo-container {
-  // border: 5px solid red;
   width: 18%;
   box-sizing: border-box;
   margin: 0.5rem;
@@ -46,7 +57,6 @@ $font-family: 'Open Sans';
 }
 
 .pull-request-title {
-  // border: 5px solid blue;
   background-color: #69B2B3;
   box-sizing: border-box;
   text-align: center;
@@ -54,7 +64,23 @@ $font-family: 'Open Sans';
   p {
     font-size: 0.9rem;
     color: white;
+    font-weight: 300;
   }
+}
+
+.old-pr {
+  background-color: $old-pr;
+  opacity: $pr-opacity;
+}
+
+.new-pr {
+  background-color: $new-pr;
+  opacity: $pr-opacity;
+}
+
+.middle-aged-pr {
+  background-color: $middle-aged-pr;
+  opacity: $pr-opacity;
 }
 
 .card-body-container {
@@ -71,7 +97,8 @@ $font-family: 'Open Sans';
   a {
     color: #78898E;
     text-decoration: none;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
+    font-weight: 300;
   }
 }
 
