@@ -57,7 +57,4 @@ typings/
 # dotenv environment variables file
 .env
 
-# public build files
-public
-
 .DS_Store
