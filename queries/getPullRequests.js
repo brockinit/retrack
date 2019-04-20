@@ -18,9 +18,11 @@ query getPullRequests($login: String!, $first: Int!, $field: RepositoryOrderFiel
             reviewRequests(first: 2) {
               edges {
                 node {
-                  reviewer {
-                    login
-                    avatarUrl
+                  requestedReviewer {
+                    ... on User {
+                      login
+                      avatarUrl
+                    }
                   }
                 }
               }

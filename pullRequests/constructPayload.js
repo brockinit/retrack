@@ -43,8 +43,8 @@ module.exports = ({ pullRequests, name }) => {
             avatar: author.avatarUrl,
           },
           reviewers: reviewRequests.edges.map(({ node }) => ({
-            username: node.reviewer.login,
-            avatar: node.reviewer.avatarUrl,
+            username: node.requestedReviewer.login,
+            avatar: node.requestedReviewer.avatarUrl,
           })),
         };
       }

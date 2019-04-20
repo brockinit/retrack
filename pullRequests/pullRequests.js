@@ -7,7 +7,7 @@ const router = express.Router();
 
 const queryVars = {
   first: 6,
-  login: 'sudokrew',
+  login: 'DaDataDudes',
   field: 'PUSHED_AT',
   direction: 'DESC',
 };

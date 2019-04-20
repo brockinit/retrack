@@ -1,5 +1,5 @@
-const { GRAPHQL_ENDPOINT } = process.env;
 const { GraphQLClient } = require('graphql-request');
+const { GRAPHQL_ENDPOINT } = process.env;
 /**
  * Query service that hits the GraphQL API and returns data
  *
